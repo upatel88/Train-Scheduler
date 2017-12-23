@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Scheduler</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Bootswatch Styling for Improving the Aesthetics -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- firebase link -->
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
+	<!-- CSS link -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+
+<!-- Main Bootstrap Container -->
+<div class="container">
+
+	<!-- Jumbotron for Title -->
+	<div class="jumbotron" style="">
+		<h1 class="text-center"><strong>Train Scheduler</strong></h1>
+		<br>
+		<h4>Choo Choo. Chee Chee</h4>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+
+			<!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+			<div class="panel panel-primary">
+
+				<!-- Panel Heading for the retrieved articles box -->
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+				</div>
+
+				<!-- This main panel will hold each of the resulting articles -->
+				<div class="panel-body" id="currEmployee">
+					<div class="panel panel-default">
+		  
+		  			<!-- Default panel contents -->
+					<table id="train-table">
+					  <tr>
+					    <th>Train Name</th>
+					    <th>Destination</th>
+					    <th>Frequency (min)</th>
+					    <th>Next Arrival</th>
+					    <th>Minutes Away</th>
+					  </tr>
+
+						<!-- Output displayed here as <tr> -->
+
+					 </table>
+	  
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Row for Train Input panel -->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+			<!-- First panel is for handling the search parameters -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><strong>Add Train</strong></h3>
+				</div>
+				<div class="panel-body">
+
+					<!-- Here we create an HTML Form for handling the inputs-->
+					<form role="form">
+
+				  	  <!-- Here we create the text box for capturing the search term-->
+					  <div class="form-group">
+					    <label for="trainName">Train Name</label>
+					    <input type="text" class="form-control" id="trainName">
+					  </div>
+
+					    <div class="form-group">
+					    <label for="destination">Destination</label>
+						<input type="text" class="form-control" id="destination">			  
+					  </div>
+
+				  	  <!-- -->
+					  <div class="form-group">
+					    <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+					    <input type="text" class="form-control" id="firstTrain">
+					  </div>
+
+				  	  <!--  -->
+					  <div class="form-group">
+					    <label for="frequency">Frequency (min)</label>
+					    <input type="text" class="form-control" id="frequency">
+					  </div>
+
+					  <!-- Here we have our final submit button -->
+					  <button type="submit" class="btn btn-default" id="submit">Add Train</button>
+  					  
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer Region -->
+	<div class="row">
+		<div class="col-sm-12">
+			
+			<!-- Line Break followed by closing -->
+			<hr>
+			<h5 class="text-center"><small>Uzair Pater - SMU Coding Bootcamp 2017  <i class="fa fa-train"></i></small></h5>
+		</div>
+	</div>
+
+</div>
+	
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Moments.js link -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+<!-- Code to the Javascript File -->
+<script src="assets/javascript/script.js"></script>
+
+</body>
+</html>
